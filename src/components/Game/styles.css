@@ -1,0 +1,32 @@
+.input-container{
+    margin-top: 20px;
+}
+.game-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-style{
+    cursor: pointer;
+    width: 100px;
+    margin: 20px;
+    border: 1px solid black;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkmagenta;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+.opened-card-style{
+    background-color: cornsilk;
+}
+.item-style{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+    display: none;
+}
+.show-card-style{
+    display: block;
+}
