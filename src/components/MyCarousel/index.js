@@ -5,18 +5,13 @@ import './styles.css';
 
 const MyCarousel = ()=>{
     const carouselRef = useRef(null);
-    const currentSlide = useRef(0);
 
     const arrowPress = (event)=>{
         if(event === 'prev'){
-            carouselRef.current.goTo(currentSlide.current-1);
+            carouselRef.current.prev();
         }else {
-            carouselRef.current.goTo(currentSlide.current+1);
+            carouselRef.current.next();
         }
-    }
-
-    const onChange = (value)=>{
-        currentSlide.current = value
     }
 
     return(
@@ -29,7 +24,7 @@ const MyCarousel = ()=>{
                     arrowPress('next')
                 }}>Next</p>
             </div>
-            <Carousel afterChange={onChange} ref={carouselRef}>
+            <Carousel ref={carouselRef}>
                 <div>
                     <h3 className='content-style'>1</h3>
                 </div>
